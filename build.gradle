@@ -1,11 +1,10 @@
 plugins {
     id 'java'
-    // The following line allows to load io.gatling.gradle plugin and directly apply it
     id 'io.gatling.gradle' version '3.8.4'
 }
 
 ext {
-    reflectionsVersion= "0.9.12"
+    reflectionsVersion= '0.10.2'
 }
 
 group 'com.net128'
@@ -40,7 +39,7 @@ task fatJar(type: Jar, dependsOn: ['gatlingClasses', 'processResources']) {
     from files(sourceSets.gatling.output)
     from {
         configurations['fatJarDependencies']
-                .collect { it.isDirectory() ? it : zipTree(it) }
+            .collect { it.isDirectory() ? it : zipTree(it) }
     }
     with jar
 }
