@@ -4,3 +4,4 @@ bin
 test-reports
 .idea
 .vscode
+.DS_Store
