@@ -1,3 +1,5 @@
+package com.net128.testing.load;
+
 import java.net.URISyntaxException;
 import java.nio.file.Path;
 import java.nio.file.Paths;

@@ -1,3 +1,5 @@
+package com.net128.testing.load;
+
 import io.gatling.recorder.GatlingRecorder;
 import io.gatling.recorder.config.RecorderPropertiesBuilder;
 import scala.Option;

@@ -1,4 +1,4 @@
-package reqres;
+package com.net128.testing.load.reqres;
 
 import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.*;

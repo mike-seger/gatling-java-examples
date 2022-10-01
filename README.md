@@ -11,6 +11,48 @@ To run simulationst, use following commands:
 
 ## Run single simulation by its FQN (fully qualified class name)
 
-```$ ./gradlew gatlingRun-computerdatabase.ComputerDatabaseSimulation```
+```$ ./gradlew gatlingRun-com.net128.testing.load.computerdatabase.ComputerDatabaseSimulation```
 
-```$ ./gradlew gatlingRun-reqres.SampleSimulation```
+```$ ./gradlew gatlingRun-com.net128.testing.load.reqres.SampleSimulation```
+
+# How to build an executable jar
+
+```shell
+./gradlew fatJar
+```
+
+## How to run simulations
+
+```shell
+export LIMIT=<Number of requests needs to invoke>
+export DURATION_IN_SECONDS=<How long performance tests should run>
+java -jar build/libs/gatling-example-1.0-SNAPSHOT-all.jar # to run all simulations sequentially
+java -jar build/libs/gatling-example-1.0-SNAPSHOT-all.jar <simulation name(s)> # to run specific simulation(s)
+```
+
+### example 1
+
+```shell
+export LIMIT=5
+export DURATION_IN_SECONDS=5
+
+java -jar build/libs/gatling-java-examples-1.0-SNAPSHOT-all.jar
+```
+
+### example 2
+
+```shell
+export LIMIT=5
+export DURATION_IN_SECONDS=5
+
+java -jar build/libs/gatling-java-examples-1.0-SNAPSHOT-all.jar com.net128.testing.load.reqres.SampleSimulation
+```
+
+### example 3
+
+```shell
+export LIMIT=5
+export DURATION_IN_SECONDS=5
+
+java -jar build/libs/gatling-java-examples-1.0-SNAPSHOT-all.jar com.net128.testing.load.computerdatabase.ComputerDatabaseSimulation com.net128.testing.load.reqres.SampleSimulation
+```

@@ -1,4 +1,4 @@
-package computerdatabase;
+package com.net128.testing.load.computerdatabase;
 
 import static io.gatling.javaapi.core.CoreDsl.*;
 import static io.gatling.javaapi.http.HttpDsl.*;
