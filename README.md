@@ -15,6 +15,8 @@ To run simulationst, use following commands:
 
 ```$ ./gradlew gatlingRun-com.net128.testing.load.reqres.BasicSimulation```
 
+```$ ./gradlew gatlingRun-com.net128.testing.load.reqres.ReqPerSecSimulation```
+
 # How to build an executable jar
 
 ```shell
