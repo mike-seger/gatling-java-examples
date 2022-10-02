@@ -64,3 +64,7 @@ export DURATION_IN_SECONDS=5
 
 java -jar build/libs/gatling-java-examples-1.0-SNAPSHOT-all.jar com.net128.testing.load.computerdatabase.ComputerDatabaseSimulation com.net128.testing.load.reqres.BasicSimulation
 ```
+
+# Links
+- https://www.softwaretestinghelp.com/gatling-reports/
+- https://docs.getxray.app/display/XRAYCLOUD/Performance+and+load+testing+with+Gatling
