@@ -13,7 +13,7 @@ To run simulationst, use following commands:
 
 ```$ ./gradlew gatlingRun-com.net128.testing.load.computerdatabase.ComputerDatabaseSimulation```
 
-```$ ./gradlew gatlingRun-com.net128.testing.load.reqres.SampleSimulation```
+```$ ./gradlew gatlingRun-com.net128.testing.load.reqres.BasicSimulation```
 
 # How to build an executable jar
 
@@ -45,14 +45,22 @@ java -jar build/libs/gatling-java-examples-1.0-SNAPSHOT-all.jar
 export LIMIT=5
 export DURATION_IN_SECONDS=5
 
-java -jar build/libs/gatling-java-examples-1.0-SNAPSHOT-all.jar com.net128.testing.load.reqres.SampleSimulation
-```
+java -jar build/libs/gatling-java-examples-1.0-SNAPSHOT-all.jar com.net128.testing.load.reqres.BasicSimulation
 
-### example 3
+### example 2
 
 ```shell
 export LIMIT=5
 export DURATION_IN_SECONDS=5
 
-java -jar build/libs/gatling-java-examples-1.0-SNAPSHOT-all.jar com.net128.testing.load.computerdatabase.ComputerDatabaseSimulation com.net128.testing.load.reqres.SampleSimulation
+java -jar build/libs/gatling-java-examples-1.0-SNAPSHOT-all.jar com.net128.testing.load.reqres.ReqPerSecSimulation
+```
+
+### example 4
+
+```shell
+export LIMIT=5
+export DURATION_IN_SECONDS=5
+
+java -jar build/libs/gatling-java-examples-1.0-SNAPSHOT-all.jar com.net128.testing.load.computerdatabase.ComputerDatabaseSimulation com.net128.testing.load.reqres.BasicSimulation
 ```

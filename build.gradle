@@ -18,6 +18,11 @@ configurations {
     fatJarDependencies.extendsFrom gatling
 }
 
+tasks.withType(JavaCompile) {
+    options.compilerArgs << '-Xlint:unchecked'
+    options.deprecation = true
+}
+
 task fatJar(type: Jar, dependsOn: ['gatlingClasses', 'processResources']) {
     group =  "build"
     manifest {
